@@ -1,4 +1,10 @@
 {
-  "name": "NewProject",
-  "displayName": "NewProject"
+  "expo": {
+    "name": "My app",
+    "slug": "my-app",
+    "sdkVersion": "37.0.0",
+    "android": {
+      "package": "com.yourcompany.yourappname"
+    }
+  }
 }

@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
-import { Text, View,StyleSheet,TouchableOpacity,Image, } from 'react-native'
+import {View,Text,StyleSheet,TouchableOpacity,Image,Button} from 'react-native'
+import { ScrollView, TextInput } from 'react-native-gesture-handler';
+export class feedback extends Component {
 
-export class details extends Component {
+    goto(){
+        alert("thank you for the feedback");
+        this.props.navigation.navigate('Home')
+    }
     render() {
         return (
+            <ScrollView>
             <View>
-                 <View style={styles.header}>
+                <View style={styles.header}>
                     <TouchableOpacity style={styles.hamburger} onPress={() => this.props.navigation.toggleDrawer()}>
                         <View style={styles.hamburgerOdd} ></View>
                         <View style={styles.hamburgerEven} ></View>
@@ -16,22 +22,30 @@ export class details extends Component {
                         <View style={styles.hamburgerOdd} ></View>
                     </TouchableOpacity >
                     <View style={styles.logoMain}>
-                        <Text style={styles.logoText}>
-                    
-                        </Text>
+                        <Text style={styles.logoText}> </Text>
                         <Image
           source={require('../Swito.jpg')}
           style={{width: 120, height: 60}} />
-                        
                     </View>
                 </View>
-                <Text style={{textAlign:"center",textDecorationStyle:"solid",fontSize:50,marginTop:60,backgroundColor:"yellow"}}>Contact us</Text>
-   <Text style={{textAlign:"center",textDecorationStyle:"solid",fontSize:20,marginTop:15}}>address-janakpuri,delhi</Text>
-   <Text style={{textAlign:"center",textDecorationStyle:"solid",fontSize:20,marginTop:15}}>contact no-8989897867</Text>
-   <Text style={{textAlign:"center",textDecorationStyle:"solid",fontSize:20,marginTop:15}}>email-swito@info.com</Text>
-                
+                <Text style={{textAlign:"center",textDecorationStyle:"solid",fontSize:30,marginTop:30,backgroundColor:"black",color:"white"}}> welcome to swito! </Text>
+                <Text style={{textAlign:"center",fontSize:20,marginTop:0,backgroundColor:"white",color:"black"}}> give your valuable feedback </Text>  
+                <Text style={{textAlign:"left",fontSize:20,margintop:20}}>Enter your name</Text>
+                <TextInput style={{marginBottom:15,height:40,borderColor: '#7a42f4',backgroundColor:"white",borderWidth: 1}}/>
+
+                <Text style={{textAlign:"left",fontSize:20,margintop:20}}>Enter your email</Text>
+                <TextInput style={{marginBottom:15,height:40,borderColor: '#7a42f4',backgroundColor:"white",borderWidth: 1}}/>
+
+                <Text style={{textAlign:"left",fontSize:20,margintop:20}}>Enter your phone number</Text>
+                <TextInput style={{marginBottom:15,height:40,borderColor: '#7a42f4',backgroundColor:"white",borderWidth: 1}}/>
+
+                <Text style={{textAlign:"left",fontSize:20,margintop:20}}>feedback</Text>
+                <TextInput style={{marginBottom:15,height:80,marginBottom:50,borderColor: '#7a42f4',backgroundColor:"white",borderWidth: 1}}/>
+                <Button style={{color:'grey',width:50,height:40}}title='submit'onPress={()=>this.goto()}/>
+          
         
             </View>
+            </ScrollView>
         )
     }
 }
@@ -86,4 +100,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default details
+export default feedback

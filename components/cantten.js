@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import {View,Text,StyleSheet,TouchableOpacity,Image,Button} from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
-export class detailsScreen extends Component {
+export class cantten extends Component {
 
     goto(){
-        this.props.navigation.navigate('canteen')
+        this.props.navigation.navigate('Items')
     }
     render() {
         return (
@@ -30,20 +30,49 @@ export class detailsScreen extends Component {
                 <Text style={{textAlign:"center",textDecorationStyle:"solid",fontSize:30,marginTop:30,backgroundColor:"black",color:"white"}}> welcome to swito! </Text>  
                 <Image
           source={require('../images/portfolio/1.jpg')}
-          style={{width: 400, height: 350,marginLeft:0,marginRight:0,marginTop:0}} />
-          <Button style={{color:'green',width:50,height:40}}title='order food fast and easy'onPress={()=>this.goto()}/>
-               
-          <Text style={{textAlign:"center",textDecorationStyle:"solid",fontSize:30,marginTop:30,backgroundColor:"white",color:"red"}}> order snacks now and get 50% off on first 10 items </Text>  
-          <Image
+          style={{width: 350, height: 50,marginLeft:20,marginRight:5,marginTop:60}} />
+          <Button style={{color:'red',width:50,height:40}}title='hari laal sweets'onPress={()=>this.goto()}/>
+               <Image
           source={require('../images/portfolio/3.jpg')}
-          style={{width: 400, height: 350,marginLeft:0,marginRight:0,marginTop:30}} />
+          style={{width: 350, height: 50,marginLeft:20,marginRight:5,marginTop:60}} />
+          <Button style={{color:'blue',width:50,height:40}}title='momos wala'onPress={()=>this.goto()}/>
+
+          <Image
+          source={require('../images/portfolio/2.jpg')}
+          style={{width: 350, height: 50,marginLeft:20,marginRight:5,marginTop:60}} />
+          <Button style={{color:"white",width:50,height:40}}title='chinese dhaba'onPress={()=>this.goto()}/>
+
+          <Image
+          source={require('../images/portfolio/4.jpg')}
+          style={{width: 350, height: 50,marginLeft:20,marginRight:5,marginTop:60}} />
+          <Button style={{color:'blue',width:50,height:40}}title='no.1 foods'onPress={()=>this.goto()}/>
+
+          <Image
+          source={require('../images/portfolio/5.jpg')}
+          style={{width: 350, height: 50,marginLeft:20,marginRight:5,marginTop:60}} />
+          <Button style={{color:'blue',width:50,height:40}}title='rahul chai wala'onPress={()=>this.goto()}/>
+
           <Image
           source={require('../images/portfolio/6.jpg')}
-          style={{width: 400, height: 350,marginLeft:0,marginRight:0,marginTop:0}} />
-          <Button style={{color:'green',width:50,height:70,marginTop:30}}title='click to place your order'onPress={()=>this.goto()}/>
+          style={{width: 350, height: 50,marginLeft:20,marginRight:5,marginTop:60}} />
+          <Button style={{color:'blue',width:50,height:40}}title='jay panipuri'onPress={()=>this.goto()}/>
+
           <Image
-          source={require('../images/order1.gif')}
-          style={{width: 400, height:250,marginLeft:0,marginRight:0,marginTop:0}} />
+          source={require('../images/portfolio/7.jpg')}
+          style={{width: 350, height: 50,marginLeft:20,marginRight:5,marginTop:60}} />
+          <Button style={{color:'blue',width:50,height:40}}title='special non-veg'onPress={()=>this.goto()}/>
+
+          <Image
+          source={require('../images/portfolio/8.jpg')}
+          style={{width: 350, height: 50,marginLeft:20,marginRight:5,marginTop:60}} />
+          <Button style={{color:'blue',width:50,height:40}}title='desi biryani'onPress={()=>this.goto()}/>
+
+          <Image
+          source={require('../images/portfolio/9.jpg')}
+          style={{width: 350, height: 50,marginLeft:20,marginRight:5,marginTop:60}} />
+          <Button style={{color:'blue',width:50,height:40}}title='cafe old town'onPress={()=>this.goto()}/>
+          
+        
             </View>
             </ScrollView>
         )
@@ -100,4 +129,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default detailsScreen
+export default cantten

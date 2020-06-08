@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import { Text, View,StyleSheet,TouchableOpacity,Image } from 'react-native'
+import { Text, View,StyleSheet,TouchableOpacity,Image,Button} from 'react-native'
 
-export class aboutUs extends Component {
+export class items extends Component {
+    goto(){
+        this.props.navigation.navigate('payment')
+    }
     render() {
         return (
             <View>
-             <View style={styles.header}>
+             <View >
                     <TouchableOpacity style={styles.hamburger} onPress={() => this.props.navigation.toggleDrawer()}>
                         <View style={styles.hamburgerOdd} ></View>
                         <View style={styles.hamburgerEven} ></View>
@@ -24,32 +27,40 @@ export class aboutUs extends Component {
           style={{width: 120, height: 60}} />
                     </View>
                 </View>
+                <Text style={{textAlign:"center",textDecorationStyle:"solid",fontSize:50,marginTop:60,backgroundColor:"orange"}}>items list </Text>
                 <View>
-             <Text style={{marginTop:30,textAlign:"justify"}}>
-             Swito is a canteen management  website which is made by Rahul Ranjan and Jai jha. Both are the pursuing BCA from Institute of Innovation in Techology and management which is affiliated to Guru Gobind Singh Indraprashtha University.
-As we have traditional canteen management system,so this website aim to provide digital way to eliminate problems of traditional canteen sysytem.
-The problems we face in canteen are standing in queues and it takes lot of time to give orders and thus canteen management also requires a lot of more human resource to run it.
+             
+            
 
-This application has two interfaces: one for client side and the other for server side. The client side mainly focuses on customers who can place their orders and doesn’t require any credentials and thus can make payment through their phones on the spot. Once an order is placed a token is generated automatically.
 
-On the server side, we provide a user interface for admin or the owners of the canteen who can log in to this application and create their menu and add payment methods. This application supports multiple canteens and a lot of canteens can register. Admins are responsible to update, verify tokens and accept or to reject orders.
-             </Text>
-             </View>
-             <View  style={{flex: 3.5, flexDirection:'row'}}>
-                <Image
-          source={require('../images/team1.jpg')}
-          style={{ width:197,height: 170}} />
+          {/* <View  style={{flex: 3, flexDirection: 'row'}}> */}
+          </View>
+          
+          <Button style={{backgroundColor:'red'}}title='Samosa Price-10Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:60}}title='noodles Price-10Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='sandwich Price-25Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='momos Price-30Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='paneer paranthe Price-40Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='chicken soup Price-10Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='chowmein Price-110Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='biryani Price-120Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='chai Price-10Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='coffee Price-30Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='rice Price-90Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='pepsi Price-20Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='chilli potato Price-100Rs'onPress={()=>this.goto()}/>
+          <Button style={{backgroundColor:'red',marginTop:20}}title='bread pakoda-20Rs'onPress={()=>this.goto()}/>
+          <Text style={{textAlign:"center",color:"red",fontSize:20}}>click on the item to pay and order</Text>
+          
+          
+
           
           
 
 
           {/* <View  style={{flex: 3, flexDirection: 'row'}}> */}
           
-                <Image
-          source={require('../images/team2.jpg')}
-          style={{ width:197,height: 170}} />
-          
-          </View>
+         
         
             </View>
         )
@@ -106,4 +117,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default aboutUs
+export default items

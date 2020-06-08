@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
-import {View,Text,StyleSheet,TouchableOpacity,Button} from 'react-native'
+import {View,Text,StyleSheet,TouchableOpacity,Image,Button} from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler';
+export class payment extends Component {
 
-
- class homeScreen extends Component {
-    constructor(props){
-        super(props);
-        }
-    
-    
+    goto(){
+        alert("you have successfully paid to the canteen owner , your token id is 'XBCFHN345376998' , please take a screenshot")
+    }
     render() {
         return (
+            <ScrollView>
             <View>
                 <View style={styles.header}>
                     <TouchableOpacity style={styles.hamburger} onPress={() => this.props.navigation.toggleDrawer()}>
@@ -22,15 +21,23 @@ import {View,Text,StyleSheet,TouchableOpacity,Button} from 'react-native'
                         <View style={styles.hamburgerOdd} ></View>
                     </TouchableOpacity >
                     <View style={styles.logoMain}>
-                        <Text style={styles.logoText}>
-                            TestAPP
-                        </Text>
+                        <Text style={styles.logoText}> </Text>
+                        <Image
+          source={require('../Swito.jpg')}
+          style={{width: 120, height: 60}} />
                     </View>
                 </View>
-                <Text style={{color:'#fff'}}>This is HomeScreen</Text>
-                <TouchableOpacity><Text>test</Text></TouchableOpacity>
-                </View>
-
+                <Text style={{textAlign:"center",textDecorationStyle:"solid",fontSize:30,marginTop:30,backgroundColor:"black",color:"white"}}> welcome to swito! </Text>  
+                <Text style={{textAlign:"center",textDecorationStyle:"solid",fontSize:30,marginTop:0,backgroundColor:"white",color:"red"}}> Pay to 8826178910 Or scan the code and pay , after payment click on confirm payment</Text>  
+                <Image
+          source={require('../images/pyt.jpg')}
+          style={{width: 400, height: 400,marginLeft:0,marginRight:0,marginTop:0}} />
+          <Button style={{color:'red',width:50,height:60,marginBottom:50}}title='confirm payment'onPress={()=>this.goto()}/>
+          <Text style={{marginBottom:60}}></Text>
+              
+        
+            </View>
+            </ScrollView>
         )
     }
 }
@@ -85,4 +92,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default homeScreen
+export default payment

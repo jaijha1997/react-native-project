@@ -7,11 +7,14 @@
  */
 
 import React, {Fragment,Component} from 'react';
+import { Rotate } from "react";
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
+  Animated,
+  Image,
   Text,
   StatusBar,
 } from 'react-native';
@@ -30,38 +33,61 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import homeScreen from './components/homeScreen';
+import Home from './components/Home';
 import detailsScreen from './components/detailsScreen';
 import aboutUs from "./components/aboutUs";
 import details from "./components/details";
+import items from "./components/items";
+import cantten from "./components/cantten";
+import forum from"./components/forum";
+import feedback from "./components/feedback";
+import payment from "./components/payment";
 
 export const RootStack = createDrawerNavigator(
   {
-      homeScreen:homeScreen,
-      detailsScreen:detailsScreen,
-      AboutUs:aboutUs,
-      DetailsCompany:details,
+      Home:Home,
+      order:detailsScreen,
+      
+      canteen:cantten,
+      Items:items,
+      payment:payment,
+      
+      
+      
+      forum:forum,
+      feedback:feedback,
+      About:aboutUs,
+      contact:details,
+      
+      
   },
   {
-      initialRouteName: "homeScreen",
+      initialRouteName: "Home",
       activeTintColor: "#fff",
-      drawerBackgroundColor: "red",
+      drawerBackgroundColor: "black",
       flex: 1,
       contentOptions: {
-          activeTintColor: "white",
-          inactiveTintColor: "green",         
+          activeTintColor: "red",
+          inactiveTintColor: "white",         
       }
   }
 )
 const AppContainer = createAppContainer(RootStack);
 export default class App extends Component {
+  
+  
+
+
   render(){
     return (
-      <View style={{backgroundColor:'blue',height:'100%',width:'100%'}}>
+
+        
+      <View style={{backgroundColor:'cyan',height:'100%',width:'100%'}}>
         <AppContainer/>
       </View>
       
+      
   );
   }
-};
 
+  }
